@@ -22,8 +22,8 @@ export default function Home() {
 
               <div className="btnRow">
                 <a className="btn btnPrimary" href="/work">View Work</a>
-                <a className="btn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
-                <a className="btn" href="https://behance.net/" target="_blank" rel="noreferrer">Behance</a>
+                <a className="btn" href="https://github.com/DylanPeter" target="_blank" rel="noreferrer">GitHub</a>
+                <a className="btn" href="https://www.behance.net/dylanpetersen3" target="_blank" rel="noreferrer">Behance</a>
               </div>
             </div>
 

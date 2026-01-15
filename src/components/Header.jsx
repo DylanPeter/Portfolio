@@ -8,7 +8,7 @@ export default function Header() {
           <a href="#work" style={styles.link}>Work</a>
           <a href="#about" style={styles.link}>About</a>
           <a href="#contact" style={styles.link}>Contact</a>
-          <a href="/resume.pdf" style={styles.resume} target="_blank" rel="noreferrer">
+          <a href="public/Dylan_Petersen_Resume.pdf" style={styles.resume} target="_blank" rel="noreferrer">
             Resume
           </a>
         </nav>
