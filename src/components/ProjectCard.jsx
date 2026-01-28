@@ -1,16 +1,20 @@
+import { Link } from "react-router-dom";
+
 export default function ProjectCard({ project }) {
   return (
-    <a href={`/work/${project.slug}`} className="card" style={styles.card}>
+    <Link to={`/work/${project.slug}`} className="card" style={styles.card}>
       <div style={styles.thumb} aria-hidden="true" />
       <div style={styles.body}>
         <div style={styles.topRow}>
           <h3 style={styles.title}>{project.title}</h3>
-          <span style={styles.tag}>{project.type}</span>
+          <span style={styles.tag}>
+            {project.category === "web" ? "Web Project" : "Graphic Design"}
+          </span>
         </div>
         <p className="muted" style={styles.blurb}>{project.blurb}</p>
         <span style={styles.more}>View project →</span>
       </div>
-    </a>
+    </Link>
   );
 }
 
@@ -26,9 +30,7 @@ const styles = {
     background: "rgba(62, 102, 128, 0.18)",
     borderBottom: "1px solid rgba(31, 41, 55, 0.10)",
   },
-  body: {
-    padding: "1rem",
-  },
+  body: { padding: "1rem" },
   topRow: {
     display: "flex",
     gap: "0.75rem",
@@ -44,18 +46,13 @@ const styles = {
   },
   tag: {
     fontSize: "0.78rem",
-    fontWeight: 600,
+    fontWeight: 700,
     padding: "0.25rem 0.55rem",
     borderRadius: 999,
     border: "1px solid rgba(31, 41, 55, 0.12)",
     background: "rgba(188, 211, 242, 0.55)",
     whiteSpace: "nowrap",
   },
-  blurb: {
-    margin: "0.6rem 0 0.9rem",
-  },
-  more: {
-    color: "var(--accent)",
-    fontWeight: 600,
-  },
+  blurb: { margin: "0.6rem 0 0.9rem" },
+  more: { color: "var(--accent)", fontWeight: 700 },
 };

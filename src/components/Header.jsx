@@ -1,14 +1,22 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
     <header style={styles.header}>
       <div className="container" style={styles.inner}>
-        <a href="#top" style={styles.brand}>Dylan Petersen</a>
+        <Link to="/" style={styles.brand}>Dylan Petersen</Link>
 
         <nav style={styles.nav}>
-          <a href="#work" style={styles.link}>Work</a>
-          <a href="#about" style={styles.link}>About</a>
-          <a href="#contact" style={styles.link}>Contact</a>
-          <a href="public/Dylan_Petersen_Resume.pdf" style={styles.resume} target="_blank" rel="noreferrer">
+          <Link to="/" style={styles.link}>Home</Link>
+          <Link to="/work" style={styles.link}>Work</Link>
+          <Link to="/about" style={styles.link}>About</Link>
+
+          <a
+            href="/resume.pdf"
+            style={styles.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Resume
           </a>
         </nav>
